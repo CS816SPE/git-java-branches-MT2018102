@@ -7,6 +7,7 @@ public class Calculator{
 		Scanner scan=new Scanner(System.in);
 		do{
 			System.out.print("Add two number: ");
+			System.out.print("Subtract two number: ");
 			System.out.println("Exit");
 			System.out.println("Enter your choice: ");
 			choice =scan.next().charAt(0);
@@ -16,13 +17,19 @@ public class Calculator{
 					b=scan.nextFloat();
 					res=a+b;
 					System.out.println("Result: "+res);
-			case '2':
+			case '2':System.out.println("Enter two number: ");
+					a=scan.nextFloat();
+					b=scan.nextFloat();
+					res=a-b;
+					System.out.println("Result: "+res);
+				
+			case '3':
 				System.out.println(0);
 				break;
 				
 			default:System.out.println("Invalid Choice.!!");		
 			}
 			System.out.println("\n--------------------------------------\n");
-		}while(choice!=2);
+		}while(choice!=3);
 }
 }
